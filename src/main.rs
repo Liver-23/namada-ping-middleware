@@ -22,7 +22,7 @@ use namada_ping_middleware::{
 async fn main() {
     dotenv().ok();
 
-    let listener: TcpListener = TcpListener::bind("0.0.0.0:1317").await.expect("Could not bind to listen address.");
+    let listener: TcpListener = TcpListener::bind("0.0.0.0:38317").await.expect("Could not bind to listen address.");
     let cors = CorsLayer::new()
         .allow_origin("*".parse::<HeaderValue>().unwrap())
         .allow_methods([Method::GET])
